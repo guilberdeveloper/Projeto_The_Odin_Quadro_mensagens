@@ -1,0 +1,182 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Message List */
+.message-list {
+    list-style: none;
+}
+
+.message-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.message-item:hover {
+    background-color: #e9e9e9;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.message-header strong {
+    font-size: 18px;
+    color: #555;
+}
+
+.message-date {
+    font-size: 14px;
+    color: #999;
+}
+
+.message-text {
+    font-size: 16px;
+    color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .message-item {
+        padding: 10px;
+    }
+
+    .message-header strong {
+        font-size: 16px;
+    }
+
+    .message-date {
+        font-size: 12px;
+    }
+
+    .message-text {
+        font-size: 14px;
+    }
+}
+
+
+/* Navbar Styles */
+.menu {
+    background-color: #333;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.menu ul li a:hover {
+    background-color: #555;
+    color: #f4f4f4;
+}
+
+/* Dropdown effect for hover (if necessary for future) */
+.menu ul li:hover ul {
+    display: block;
+}
+
+.menu ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu ul li ul li {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.menu ul li ul li a {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .menu ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu ul li a {
+        width: 100%;
+        padding: 15px;
+    }
+}

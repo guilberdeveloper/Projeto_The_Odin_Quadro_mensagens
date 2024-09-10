@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title><%= title %></title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <%- include('./components/navbar.ejs', {links:links}) %>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h4>Todos os nossos usuários</h4>
+        <ul class="message-list">
+            <% messages.forEach((message) => { %>
+                <li class="message-item">
+                    <div class="message-header">
+                        <strong><%= message.user %></strong>
+                        <span class="message-date"><%= message.added.toDateString() %></span>
+                    </div>
+                    <p class="message-text"><%= message.text %></p>
+
+                    
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+
+</body>
+</html>
